@@ -1,0 +1,261 @@
+#topRowBattle{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 350px;
+}
+
+#playerPokemon{
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border-color: blue;
+}
+
+#oppPokemon{
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border-color: red;
+}
+
+#buttonsBattle {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: none;
+}
+
+.pokemon {
+  margin: 20px 150px;
+}
+
+@font-face{
+  font-family: 'pkmnText';
+  src: url('Fonts/PKMN RBYGSC.ttf');
+}
+
+* {
+   font-family: 'pkmnText';
+   font-size: 16px;
+}
+body{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+}
+
+#topRow {
+  height: 50%;
+}
+
+#bottomRow {
+  height: 50%;
+}
+
+.buttons{
+  position: relative;
+  height: 60px;
+  max-height: 60px;
+  width: 130px;
+  border-radius: 5px;
+  color: white;
+  font-size: 70%;
+  filter: brightness(100%);
+  border: 2px solid black;
+  background-image: radial-gradient(darkgrey, darkgrey, #424242);
+  margin: 5px;
+}
+
+.buttons:hover{
+  filter: brightness(120%);
+}
+.buttons:active{
+  filter: brightness(140%);
+}
+
+html{
+  height: 100%;
+}
+
+.normal{
+  background-image: radial-gradient(darkgrey, darkgrey, grey);
+}
+.fire{
+  background-image: radial-gradient(orangered, orangered, red);
+}
+.electric{
+  background-image: radial-gradient(gold, gold, rgb(184, 156, 0));
+}
+.water{
+  background-image: radial-gradient(blue, blue, darkblue);
+}
+.psychic{
+  background-image: radial-gradient(magenta, magenta, darkmagenta);
+}
+.dark{
+  background-image: radial-gradient(#242424, #242424, black);
+}
+.ice{
+  background-image: radial-gradient(turquoise, turquoise, rgb(0, 152, 155));
+}
+.grass{
+  background-image: radial-gradient(limegreen, limegreen, green);
+}
+.fairy{
+  background-image: radial-gradient(rgb(255, 123, 140), rgb(255, 123, 140), rgb(255, 66, 98));
+}
+.bug{
+  background-image: radial-gradient(  rgb(157, 255, 0), rgb(157, 255, 0), yellowgreen);
+}
+.fighting{
+  background-image: radial-gradient(rgb(168, 0, 0), rgb(168, 0, 0), maroon);
+}
+
+#SelectPokemonSection {
+  margin: 25%;
+}
+
+#BattleSection {
+  display: none;
+  background-image: linear-gradient(to top, green, green, green, green, green, turquoise, skyblue);
+  height: 480px;
+  width: 852px;
+  position: relative;
+}
+
+img {
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+#bottomRowTextBox {
+  border: 5px solid black;
+  border-radius: 15px;
+  bottom: 0%;
+  height: 148px;
+  width: 842px;
+  position: absolute;
+  background-image: radial-gradient(darkgrey, darkgrey, #868686);
+}
+#bottomRowTextBox text{
+  margin: 5px;
+}
+
+#opponent_platform{
+  width: 130px;
+  height: 39px;
+  position: absolute;
+  right: 140px;
+  top: 127px;
+  z-index: 0;
+}
+#player_platform{
+  width: 130px;
+  height: 39px;
+  position: absolute;
+  left: 109px;
+  top: 247px;
+  z-index: 0;
+}
+
+#battle_text{
+  margin: 10px;
+  max-width: 550px;
+  word-wrap: break-word;
+}
+
+#playerPokemonImg {
+  top: 200px;
+  left: 120px;
+  position: absolute;
+  z-index: 999;
+}
+#oppPokemonImg {
+  top: 80px;
+  right: 150px;
+  position: absolute;
+  z-index: 999;
+}
+
+.hp {
+  width: 110px;
+  height: 15px;
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#playerHP {
+  top: 180px;
+  left: 120px;
+  z-index: 999;
+}
+
+#hpOutline {
+  position: absolute;
+  top: 177px;
+  left: 117px;
+  border: 3px solid black;
+  width: 110px;
+  height: 15px;
+  background-color:lightgray;
+}
+
+#oppHP {
+  top: 60px;
+  right: 150px;
+  z-index: 999;
+}
+
+#oppHpOutline {
+  position: absolute;
+  top: 57px;
+  right: 147px;
+  border: 3px solid black;
+  width: 110px;
+  height: 15px;
+  background-color:lightgray;
+}
+
+.highHP{
+  background-color: lime;
+}
+.mediumHP{
+  background-color: yellow;
+}
+.lowHP{
+  background-color: red;
+}
+
+#playerHpText {
+  position: absolute;
+  top: 162px;
+  left: 120px;
+  z-index: 1000;
+}
+
+#oppHpText {
+  position: absolute;
+  top: 42px;
+  right: 150px;
+  z-index: 1000;
+}
+
+#confirmChoice {
+  display: none;
+}
+
+.fainted{
+  background-image: radial-gradient(red, red, darkred);
+}
+
+#playAgain {
+  display: none;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Alekz G's Pokemon Battle Simulator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="Images/BeastBall.png"/>
+  </head>
+
+  <body>
+    <div id="container">
+      <!-- Initial Pokemon Selection -->
+      <div id="SelectPokemonSection">
+        <div id="topRow" align="center">
+        </div>
+        <br>
+        <div id = "bottomRow" align = "center">
+          <button class = "buttons normal" onclick = "displayPokemon(eevee)">Eevee</button>
+          <button class = "buttons fire" onclick = "displayPokemon(flareon)">Flareon</button>
+          <button class = "buttons electric" onclick = "displayPokemon(jolteon)">Jolteon</button>
+          <button class = "buttons water" onclick = "displayPokemon(vaporeon)">Vaporeon</button><br>
+          <button class = "buttons psychic" onclick = "displayPokemon(espeon)">Espeon</button>
+          <button class = "buttons dark" onclick = "displayPokemon(umbreon)">Umbreon</button>
+          <button class = "buttons ice" onclick = "displayPokemon(glaceon)">Glaceon</button>
+          <button class = "buttons grass" onclick = "displayPokemon(leafeon)">Leafeon</button>
+          <button class = "buttons fairy" onclick = "displayPokemon(sylveon)">Sylveon</button>
+        </div>
+        <div id = "confirmChoice" align = "center">
+          <br><br><button class = 'buttons normal' id='confirmBtn'>Confirm?</button>
+        </div>
+      </div>
+
+      <!--Battle-->
+      <div id="BattleSection">
+        <div id = "topRowBattle">
+          <div id = "playerPokemon" class = "pokemon">
+            <img id="playerPokemonImg"  />
+            <div id = "hpOutline"></div>
+            <div class = "hp highHP" id = "playerHP"></div>
+            <p id = "playerHpText"></p>
+          </div>
+          <div id = "oppPokemon" class = "pokemon">
+            <img id="oppPokemonImg"  />
+            <div class = "hp highHP" id = "oppHP"></div>
+            <div id = "oppHpOutline"></div>
+            <p id = "oppHpText"></p>
+          </div>
+          <img id="opponent_platform" src="Images/opponent_platform.png" />
+          <img id="player_platform" src="Images/opponent_platform.png" />
+        </div>
+        <div id = "bottomRowTextBox">
+          <p id="battle_text"></p>
+        </div>
+        <div id = "buttonsBattle">
+          <table id = "buttonsBattleTable">
+            <tr>
+              <th><button class = "buttons" id = "button1">FIGHT</button></th>
+              <th><button class = "buttons" id = "button2" onclick = "item()">ITEM</button></th>
+            </tr>
+            <tr>
+              <th><button class = "buttons" id = "button3" onclick = "changePokemon()">POKEMON</button></th>
+              <th><button class = "buttons" id = "button4" onclick = "run()">RUN</button></th>
+            </tr>         
+          </table>
+        </div>
+      </div>
+
+      <!--Ask To Play Again-->
+      <div id = "playAgain" align = "center">
+        <p id = "playAgainText"></p>
+        <button class = "buttons normal" onclick = "playAgain()">Yes</button>
+        <button class = "buttons normal" onclick = "endGame()">No</button>
+      </div>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
